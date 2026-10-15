@@ -1,0 +1,23 @@
+{
+  "name": "dsh-macos-tap-fix",
+  "version": "0.1.0",
+  "description": "Workaround for WebKit Bug 219670: on macOS with an input method active, trackpad Tap-to-Click can lose the first click in DeepSeek Harness.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "keywords": ["dsh-plugin", "deepseek-harness", "dsh", "cordis", "macos", "safari", "webkit", "tap-to-click"],
+  "repository": { "type": "git", "url": "git+https://github.com/lifwsp/dsh-macos-tap-fix.git" },
+  "homepage": "https://github.com/lifwsp/dsh-macos-tap-fix#readme",
+  "bugs": { "url": "https://github.com/lifwsp/dsh-macos-tap-fix/issues" },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web" }
+  },
+  "files": ["lib", "client", "cordis.patch.yml", "README.md", "LICENSE"]
+}
